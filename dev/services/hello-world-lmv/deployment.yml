@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-lmv-dev
+  labels:
+    app: hello-world-lmv-dev
+spec:
+  revisionHistoryLimit: 0
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-lmv-dev
+  template:
+    metadata:
+      labels:
+        app: hello-world-lmv-dev
+    spec:
+      containers:
+        - name: hello-world-lmv
+          image: 766597584338.dkr.ecr.us-east-2.amazonaws.com/hello-world-lmv:1.0.40
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: gitlab-registry-auth

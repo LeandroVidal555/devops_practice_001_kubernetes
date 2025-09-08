@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-lmv-dev
+spec:
+  type: ClusterIP
+  selector:
+    app: hello-world-lmv-dev
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+
+
