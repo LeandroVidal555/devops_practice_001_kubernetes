@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world-dev
+  name: hello-world-lmv
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "10"   # optional ordering
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-org>/<your-repo>.git
+    repoURL: https://github.com/LeandroVidal555/devops_practice_001_kubernetes.git
     targetRevision: main
-    path: dev/services/hello-world       # <— points to the manifests folder
+    path: dev/services/hello-world-lmv       # <— points to the manifests folder
   destination:
     server: https://kubernetes.default.svc
-    namespace: hello-world-dev           # <— app’s namespace
+    namespace: default           # <— app’s namespace
   syncPolicy:
     automated:
       prune: true
