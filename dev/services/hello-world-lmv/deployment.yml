@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello-world-lmv
-          image: 381443105190.dkr.ecr.us-east-2.amazonaws.com/dp-001-app:1.0.0
+          image: 381443105190.dkr.ecr.us-east-1.amazonaws.com/dp-001-app:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
