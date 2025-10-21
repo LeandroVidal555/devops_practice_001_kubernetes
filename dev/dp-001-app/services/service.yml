@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-lmv-dev
+  name: dp-001-app
 spec:
   type: ClusterIP
   selector:
-    app: hello-world-lmv-dev
+    app: dp-001-app-dev
   ports:
     - name: http
       port: 3000
