@@ -8,5 +8,6 @@ commonLabels:
 
 resources:
   - services/deployment.yml
+  - services/hpa.yml
   - services/service.yml
   - ingresses/ingress.yml
