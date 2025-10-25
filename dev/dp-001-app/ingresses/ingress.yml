@@ -10,7 +10,6 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: "200,404"
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:381443105190:certificate/8c7b8504-192e-41e4-8e4d-42e6f828e1c5
-    alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/inbound-cidrs: 0.0.0.0/0
     alb.ingress.kubernetes.io/manage-backend-security-group-rules: true
 spec:
