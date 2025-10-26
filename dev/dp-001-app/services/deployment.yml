@@ -6,7 +6,6 @@ metadata:
     app: dp-001-app-dev
 spec:
   revisionHistoryLimit: 2
-  replicas: 1
   selector:
     matchLabels:
       app: dp-001-app-dev
