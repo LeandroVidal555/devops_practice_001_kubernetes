@@ -7,4 +7,4 @@ commonLabels:
   env: dev
 
 resources:
-  - ingresses/ingress.yml
+  - ingresses/grafana.yml
