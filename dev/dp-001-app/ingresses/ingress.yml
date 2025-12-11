@@ -15,10 +15,10 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: dp-001-app.dev.lmv-dev.top
+    - host: dp-001.dev.lmv-dev.top
       http:
         paths:
-          - path: /
+          - path: /api
             pathType: Prefix
             backend:
               service:
