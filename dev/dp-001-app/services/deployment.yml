@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dp-001-app
-          image: 381443105190.dkr.ecr.us-east-1.amazonaws.com/dp-001-app:1.0.1
+          image: 381443105190.dkr.ecr.us-east-1.amazonaws.com/dp-001-app:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
