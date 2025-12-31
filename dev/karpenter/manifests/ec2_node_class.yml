@@ -3,6 +3,9 @@ kind: EC2NodeClass
 metadata:
   name: node-class
 spec:
+  metadataOptions:
+    httpTokens: required
+    httpPutResponseHopLimit: 2
   subnetSelectorTerms:
     - tags:
         karpenter.sh/discovery: "dev-dp-001-cluster"
