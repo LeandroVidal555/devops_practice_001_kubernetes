@@ -9,3 +9,10 @@ spec:
         group: karpenter.k8s.aws
         kind: EC2NodeClass
         name: node-class
+      requirements: # instance creation criteria
+        - key: kubernetes.io/os
+          operator: In
+          values: ["linux"]
+        - key: kubernetes.io/arch
+          operator: In
+          values: ["amd64"]

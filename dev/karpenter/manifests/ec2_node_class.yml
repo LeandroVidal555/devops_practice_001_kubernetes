@@ -3,6 +3,8 @@ kind: EC2NodeClass
 metadata:
   name: node-class
 spec:
+  amiSelectorTerms:
+    - alias: al2023@latest
   metadataOptions:
     httpTokens: required
     httpPutResponseHopLimit: 2
