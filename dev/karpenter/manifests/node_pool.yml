@@ -1,0 +1,11 @@
+apiVersion: karpenter.sh/v1
+kind: NodePool
+metadata:
+  name: node-pool
+spec:
+  template:
+    spec:
+      nodeClassRef:
+        group: karpenter.k8s.aws
+        kind: EC2NodeClass
+        name: node-class

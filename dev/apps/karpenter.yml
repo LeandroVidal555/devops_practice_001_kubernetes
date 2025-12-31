@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dp-001-app-dev
+  name: karpenter-dev
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
   source:
     repoURL: https://github.com/LeandroVidal555/devops_practice_001_kubernetes.git
     targetRevision: main
-    path: dev/dp-001-app
+    path: dev/karpenter
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: karpenter
   syncPolicy:
     automated: { prune: true, selfHeal: true }
     syncOptions:
-      - CreateNamespace=true
+      - CreateNamespace=false
