@@ -14,6 +14,8 @@ spec:
       labels:
         app: dp-001-app-dev
     spec:
+      nodeSelector:
+        karpenter.sh/nodepool: node-pool
       containers:
         - name: dp-001-app
           image: 381443105190.dkr.ecr.us-east-1.amazonaws.com/dp-001-app:1.0.0
