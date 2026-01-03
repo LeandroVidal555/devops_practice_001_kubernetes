@@ -3,7 +3,7 @@ kind: NodePool
 metadata:
   name: node-pool-mcr
 spec:
-  weight: 100
+  weight: 10
   template:
     spec:
       nodeClassRef:
