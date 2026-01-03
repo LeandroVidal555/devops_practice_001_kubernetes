@@ -1,0 +1,25 @@
+apiVersion: karpenter.sh/v1
+kind: NodePool
+metadata:
+  name: node-pool-mcr
+spec:
+  weight: 100
+  template:
+    spec:
+      nodeClassRef:
+        group: karpenter.k8s.aws
+        kind: EC2NodeClass
+        name: node-class
+      requirements: # instance creation criteria
+        - key: kubernetes.io/os
+          operator: In
+          values: ["linux"]
+        - key: kubernetes.io/arch
+          operator: In
+          values: ["amd64"]
+        - key: karpenter.k8s.aws/instance-family
+          operator: In
+          values: ["m7a","c7a","c8a","r8a"]
+        - key: karpenter.k8s.aws/instance-size
+          operator: NotIn
+          values: ["nano","micro","small","medium"]
