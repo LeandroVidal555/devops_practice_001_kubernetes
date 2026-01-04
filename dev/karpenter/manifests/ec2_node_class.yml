@@ -15,3 +15,5 @@ spec:
     - tags:
         karpenter.sh/discovery: "dev-dp-001-cluster"
   role: "dev-dp-001-cluster-karpenter-node-role"
+  tags:
+    Name: eks-node-dev-dp-001-karpenter
